@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace RealTimeComplilerNUTest
 {
-    public class Tests
+    public class RunTimeCompilerTest
     {
         [SetUp]
         public void Setup()
