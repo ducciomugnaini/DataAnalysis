@@ -1,10 +1,12 @@
-# Covid Analysis
+# DataAnalysis
 
 # Javascript Side
 
 `npm install`
 
-`npm install chart.js --save`
+`npm install jquery`
+`npm install chart.js`
+`npm install jsgrid`
 
 # C# Side
 
