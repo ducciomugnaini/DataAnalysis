@@ -8,6 +8,10 @@
 `npm install chart.js`
 `npm install jsgrid`
 
+[Vue tutorial](https://www.tutorialspoint.com/vuejs/vuejs_routing.htm)
+[Vue SPA tutorial](https://www.adcisolutions.com/knowledge/how-build-single-page-application-spa-vuejs?utm_source=adci-website&utm_campaign=improve-your-vuejs&utm_content=improve-your-vuejs-link-spa-vuejs) 
+[Vue SPA Github](https://github.com/DChuchin/vue-spa-tutorial/tree/step-5)
+
 # C# Side
 
 [Net Core 3](https://docs.microsoft.com/it-it/dotnet/core/whats-new/dotnet-core-3-0)  
