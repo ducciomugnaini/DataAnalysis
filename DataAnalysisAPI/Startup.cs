@@ -1,3 +1,4 @@
+using DataAnalysisAPI.Authentication.Utillities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +20,8 @@ namespace DataAnalysisAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region General config
+
             services.AddControllers();
 
             services.AddCors(c =>
@@ -26,8 +29,21 @@ namespace DataAnalysisAPI
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
             });
 
-            // Configurazione della DI nativa di net core
+            // JWT Auth - configure strongly typed settings object
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+
+            #endregion
+
+            #region DI
+
+            // Configurazione della DI per runtime compiler
             services.AddTransient<IRunnable, RealtimeCompiler.RealTimeCompilerDI>();
+
+            // JWT Auth - configure DI for application services (lettura condigurazioni)
+            services.AddScoped<IUserService, UserService>();
+
+            #endregion            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,6 +53,9 @@ namespace DataAnalysisAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // custom jwt auth middleware
+            app.UseMiddleware<JwtMiddleware>();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -53,7 +72,7 @@ namespace DataAnalysisAPI
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
+            });            
         }
     }
 }

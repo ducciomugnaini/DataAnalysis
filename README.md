@@ -40,6 +40,8 @@ Il container di netCore fa cagare ma dobbiamo tenerlo finchè non si capisce com
 L'ultimo link è quello fondamentale per impostare il log per le dll esterne.  
 Baraccone tirato su per non passare esplicitamente il logger alla libreria esterna ma attraverso la DI.
 
+[JWT Auth](https://jasonwatmore.com/post/2019/10/11/aspnet-core-3-jwt-authentication-tutorial-with-example-api#app-settings-cs)
+
 # Utilities
 
 [Code Maid](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid)
