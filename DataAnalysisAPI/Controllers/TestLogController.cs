@@ -5,7 +5,6 @@ using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Logging;
-using RealtimeCompiler;
 using RealtimeCompiler.Interfaces;
 
 namespace DataAnalysisAPI.Controllers

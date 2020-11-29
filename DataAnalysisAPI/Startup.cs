@@ -54,8 +54,12 @@ namespace DataAnalysisAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            #region Middlewares setup
+
             // custom jwt auth middleware
             app.UseMiddleware<JwtMiddleware>();
+
+            #endregion
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
