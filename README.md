@@ -1,4 +1,4 @@
-# DataAnalysis
+# DataAnalysis - Dynamically compile and run code using .NET Core 3.0
 
 # Javascript Side
 
