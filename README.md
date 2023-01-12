@@ -45,3 +45,7 @@ Baraccone tirato su per non passare esplicitamente il logger alla libreria ester
 # Utilities
 
 [Code Maid](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid)
+
+# Notes
+
+Per far girare correttamente i test impostare RealtimeCompiler\Sources\DynamicProgram.cs come Properties > Build Action - Embedded Resource / Copy always
